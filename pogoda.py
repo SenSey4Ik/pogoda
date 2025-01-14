@@ -1,4 +1,10 @@
 import requests
 
-key= 'a7f4f87bae7bab389531f7a5cc5349a9'
-city = 'Biysk, RU'
+url='https://www.gismeteo.ru/weather-bysk-4731/'
+headers = {
+    'User-Agent' : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'
+}
+response = requests.get(url,headers=headers)
+
+
+print(response.text)
